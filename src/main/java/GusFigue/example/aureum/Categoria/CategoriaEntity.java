@@ -1,4 +1,4 @@
-package GusFigue.example.demo.Conta;
+package GusFigue.example.aureum.Categoria;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -6,25 +6,23 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.math.BigDecimal;
-
-@Entity(name = "conta")
-@Table(name = "conta")
+@Entity(name = "categoria")
+@Table(name = "categoria")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ContaEntity {
+public class CategoriaEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String nome;
 
-    private String tipo;
+    private String descricao;
 
-    private BigDecimal saldoInicial;
+    private String tipo;
 
     private Boolean ativo;
 }

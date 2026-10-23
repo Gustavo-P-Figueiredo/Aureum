@@ -1,4 +1,4 @@
-package GusFigue.example.demo.Utils;
+package GusFigue.example.aureum.Utils;
 
 public enum DiaSemana {
     DOMINGO,

@@ -1,10 +1,10 @@
-package GusFigue.example.demo;
+package GusFigue.example.aureum;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class AureumApplicationTests {
 
 	@Test
 	void contextLoads() {

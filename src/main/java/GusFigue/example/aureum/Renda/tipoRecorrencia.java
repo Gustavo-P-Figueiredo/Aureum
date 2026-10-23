@@ -1,4 +1,4 @@
-package GusFigue.example.demo.Renda;
+package GusFigue.example.aureum.Renda;
 
 public enum tipoRecorrencia {
     MENSAL, //Recorrente todo dia de um mes EX: todo dia 5

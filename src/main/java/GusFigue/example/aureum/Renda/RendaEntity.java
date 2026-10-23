@@ -1,7 +1,7 @@
-package GusFigue.example.demo.Renda;
-import GusFigue.example.demo.Categoria.CategoriaEntity;
-import GusFigue.example.demo.Conta.ContaEntity;
-import GusFigue.example.demo.Utils.DiaSemana;
+package GusFigue.example.aureum.Renda;
+import GusFigue.example.aureum.Categoria.CategoriaEntity;
+import GusFigue.example.aureum.Conta.ContaEntity;
+import GusFigue.example.aureum.Utils.DiaSemana;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,10 +9,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDate;
 
-@Entity(name = "Renda")
-@Table(name = "Renda")
+@Entity(name = "renda")
+@Table(name = "renda")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -20,7 +20,7 @@ import java.util.Date;
 public class RendaEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
@@ -33,15 +33,18 @@ public class RendaEntity {
 
     private String descricao;
 
+    @Column(precision = 19, scale = 2)
     private BigDecimal valor;
 
+    @Enumerated(EnumType.STRING)
     private tipoRecorrencia recorrencia;
 
-    private Date diaMes;
+    private Integer diaMes;
 
+    @Enumerated(EnumType.STRING)
     private DiaSemana diaSemana;
 
-    private Date dataPontual;
+    private LocalDate dataPontual;
 
     private Boolean ativo;
 }
